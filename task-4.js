@@ -7,16 +7,13 @@
 // обрезает строку до 40 - ка символов и добавляет в
 // конец строки троеточие '...', после чего возвращает укороченную версию.
 
-const formatString = function (string) {
-    let array = Array.from(string);
-    if (array.length <= 40) {
-      return string;
-    } else {
-      array.length = 40;
-      array.push("...");
-      return array.join("");
-    }
-  };
+const formatString = function(string) {
+  // console.log(string.length);
+  if (string.length <= 40) 
+    return string;
+    return `${string.substr(0, 40)}...`;
+    
+};
   
   /*
    * Вызовы функции для проверки работоспособности твоей реализации.
